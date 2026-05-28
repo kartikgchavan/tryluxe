@@ -1,0 +1,259 @@
+.navbar {
+  width: 100%;
+  height: 78px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  color: #171717;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.navbar-logo span {
+  color: #9b6b43;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: #9b6b43;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: #9b6b43;
+  transition: 0.3s ease;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+  width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cart-link {
+  text-decoration: none;
+  background: #171717;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.cart-link:hover {
+  background: #9b6b43;
+  transform: translateY(-2px);
+}
+
+.cart-link span {
+  background: white;
+  color: #171717;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: #f5f0eb;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 20px;
+  height: 2px;
+  background: #171717;
+  border-radius: 999px;
+  transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    height: 72px;
+    padding: 0 5%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 72px;
+    left: 5%;
+    right: 5%;
+    background: white;
+    border-radius: 24px;
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: 0.3s ease;
+  }
+
+  .navbar-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navbar-links a {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .cart-link {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+}
+/* ================================
+   PREMIUM MOBILE NAVBAR POLISH
+================================ */
+
+@media (max-width: 900px) {
+  .navbar {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+  }
+
+  .navbar-links {
+    top: 84px;
+    left: 4%;
+    right: 4%;
+    padding: 28px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(22px);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.18);
+  }
+
+  .navbar-links a {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-size: 18px;
+  }
+
+  .navbar-links a:hover,
+  .navbar-links a.active {
+    background: #f6f0e7;
+    color: #9b6b43;
+  }
+
+  .navbar-links a::after {
+    display: none;
+  }
+
+  .hamburger {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .hamburger:hover {
+    background: #ebe2d7;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    height: 76px;
+    padding: 0 5%;
+  }
+
+  .navbar-logo {
+    font-size: 27px;
+  }
+
+  .cart-link {
+    padding: 11px 17px;
+    font-size: 14px;
+  }
+
+  .navbar-actions {
+    gap: 12px;
+  }
+
+  .hamburger {
+    width: 46px;
+    height: 46px;
+  }
+
+  .navbar-links {
+    top: 86px;
+  }
+}
