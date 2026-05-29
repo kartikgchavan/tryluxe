@@ -36,8 +36,8 @@ const Navbar = () => {
           AI Stylist
         </NavLink>
 
-        <NavLink to="/checkout" onClick={closeMenu}>
-          Checkout
+        <NavLink to="/about" onClick={closeMenu}>
+          About
         </NavLink>
 
         <NavLink to="/login" onClick={closeMenu}>

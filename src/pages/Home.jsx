@@ -90,7 +90,38 @@ function Home() {
             <strong>Luxury Minimal Look</strong>
           </div>
         </div>
+        </section>
+
+<section className="featured-products">
+  <div className="featured-header">
+    <p>FEATURED COLLECTION</p>
+    <h2>Shop AI-picked luxury styles</h2>
+  </div>
+
+  <div className="featured-grid">
+    <div className="featured-card">
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" alt="Luxury Streetwear" />
+      <h3>Luxury Streetwear</h3>
+      <p>Premium everyday outfits with bold modern styling.</p>
+    </div>
+
+    <div className="featured-card">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80" alt="Elegant Dresses" />
+      <h3>Elegant Dresses</h3>
+      <p>Chic looks selected for confident fashion moments.</p>
+    </div>
+
+    <div className="featured-card">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Smart Casual" />
+      <h3>Smart Casual</h3>
+      <p>Balanced styles for work, outings, and lifestyle wear.</p>
+    </div>
+  </div>
+</section>
+
+<section className="home-features">
       </section>
+      
 
       <section className="home-features">
         {features.map((feature, index) => (

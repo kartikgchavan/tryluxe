@@ -10,6 +10,7 @@ import Stylist from "./pages/Stylist";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
+import About from "./pages/About";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/stylist" element={<Stylist />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
         </Routes>
 
